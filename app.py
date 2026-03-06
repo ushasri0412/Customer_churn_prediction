@@ -10,18 +10,20 @@ with open("logistic_model.pkl","rb") as f:
 with open("scaler.pkl","rb") as f:
     scaler = pickle.load(f)
 
-# ----- Center Title -----
+st.set_page_config(page_title="Customer Churn Prediction",
+                   page_icon="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUFn08nPcyt3DsaFCFJ4tQxaV9AW3cmf56Jw&s")
+# Center Title
 st.markdown(
     "<h1 style='text-align: center;'>Customer Churn Prediction</h1>",
     unsafe_allow_html=True
 )
 
 st.markdown(
-    "<h4 style='text-align: center;'>Predict whether a customer will churn or stay</h4>",
+    "<h4 style='text-align: center;'>Predicting whether a customer will churn or stay</h4>",
     unsafe_allow_html=True
 )
 
-# ----- Center Image -----
+# Center Image 
 col1, col2, col3 = st.columns([1,2,1])
 
 with col2:
@@ -126,14 +128,14 @@ contract = ["Month-to-month","One year","Two year"].index(contract)
 
 paymentmethod = ["Electronic check","Mailed check","Bank transfer","Credit card"].index(paymentmethod)
 
-# ----- Center Predict Button -----
+#Center Predict Button
 
 c1, c2, c3 = st.columns([1,2,1])
 
 with c2:
     predict = st.button("Predict Churn")
 
-# ----- Prediction -----
+# Prediction 
 
 if predict:
 
