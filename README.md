@@ -25,3 +25,7 @@ streamlit run command
 ```
 streamlit run file.py
 ```
+Live Application
+```
+https://customerchurnprediction-d5aysan4c29aapugtt9dur.streamlit.app/
+```
